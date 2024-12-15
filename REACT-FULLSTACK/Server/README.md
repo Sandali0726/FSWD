@@ -12,7 +12,42 @@ AutoCart is an AI-based web application that acts as a machine customer, providi
 
 ## Project Structure
 
-AutoCart/ ├── AI/ │ ├── AI.py │ ├── PM.py │ ├── Scrapping.py │ ├── tavily_search.py │ ├── voice recognition.py │ └── .gitignore ├── frontend/ │ ├── public/ │ ├── src/ │ │ ├── app/ │ │ ├── components/ │ │ ├── layouts/ │ │ ├── pages/ │ │ ├── assets/ │ │ ├── lib/ │ │ ├── global.css │ │ ├── index.css │ │ ├── main.tsx │ │ ├── AppRoutes.tsx │ │ └── vite-env.d.ts │ ├── .gitignore │ ├── components.json │ ├── eslint.config.js │ ├── index.html │ ├── package.json │ ├── postcss.config.js │ ├── tailwind.config.js │ ├── tsconfig.app.json │ ├── tsconfig.json │ ├── tsconfig.node.json │ └── vite.config.ts ├── performance_model.pkl └── README.md
+AutoCart/
+├── AI/
+│   ├── AI.py
+│   ├── PM.py
+│   ├── Scrapping.py
+│   ├── tavily_search.py
+│   ├── voice recognition.py
+│   └── .gitignore
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── app/
+│   │   ├── components/
+│   │   ├── layouts/
+│   │   ├── pages/
+│   │   ├── assets/
+│   │   ├── lib/
+│   │   ├── global.css
+│   │   ├── index.css
+│   │   ├── main.tsx
+│   │   ├── AppRoutes.tsx
+│   │   └── vite-env.d.ts
+│   ├── .gitignore
+│   ├── components.json
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── package.json
+│   ├── postcss.config.js
+│   ├── tailwind.config.js
+│   ├── tsconfig.app.json
+│   ├── tsconfig.json
+│   ├── tsconfig.node.json
+│   └── vite.config.ts
+├── performance_model.pkl
+└── README.md
+
 
 
 ## Installation
