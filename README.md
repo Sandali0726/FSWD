@@ -38,16 +38,21 @@ AutoCart/ ├── AI/ │ ├── AI.py │ ├── PM.py │ ├── Sc
     OPENAI_KEY=your_openai_api_key
     TRAVITY_KEY=your_tavily_api_key
 
-Frontend
-    1.Navigate to the frontend directory:
-           cd frontend
-    2.Install the required Node.js packages:
-            npm install
-    3.Start the development server:
-            npm run dev
+###Frontend
+    1. Navigate to the frontend directory:
+    ```sh
+      cd frontend
+           
+    2. Install the required Node.js packages:
+    ```sh
+    npm install
+    
+    3. Start the development server:
+    ```sh
+    npm run dev
     
 
-Usage
+###Usage
     1.Open your browser and navigate to http://localhost:3000.
     2.Use the search form to find products.
     3.View the latest deals and search results.
