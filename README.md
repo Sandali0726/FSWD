@@ -39,6 +39,7 @@ AutoCart/ ├── AI/ │ ├── AI.py │ ├── PM.py │ ├── Sc
     TRAVITY_KEY=your_tavily_api_key
 
 ###Frontend
+
     1. Navigate to the frontend directory:
     ```sh
       cd frontend
@@ -53,6 +54,7 @@ AutoCart/ ├── AI/ │ ├── AI.py │ ├── PM.py │ ├── Sc
     
 
 ###Usage
+
     1.Open your browser and navigate to http://localhost:3000.
     2.Use the search form to find products.
     3.View the latest deals and search results.
