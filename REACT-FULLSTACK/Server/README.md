@@ -65,8 +65,12 @@ AutoCart/ ├── AI/ │ ├── AI.py │ ├── PM.py │ ├── Sc
 ### Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
+
 ![Screenshot 2024-12-15 161951](https://github.com/user-attachments/assets/f6fcbfee-703e-4fe2-8c71-2bfc3d09a597)
+
 ![Screenshot 2024-12-15 162004](https://github.com/user-attachments/assets/622683ec-c13c-4434-9ea4-51a7ae4458d9)
+
 ![Screenshot 2024-12-15 162013](https://github.com/user-attachments/assets/c743b91b-41a6-4bea-b926-df7b9d21e9ab)
+
 ![Screenshot 2024-12-15 162022](https://github.com/user-attachments/assets/2a5a33e9-7796-4306-a18f-80d74cc4ed0b)
 
