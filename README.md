@@ -34,7 +34,7 @@ AutoCart/ ├── AI/ │ ├── AI.py │ ├── PM.py │ ├── Sc
 2. Install the required Python packages:
    pip install -r requirements.txt
 
-3.Set up environment variables in a .env file:
+3. Set up environment variables in a .env file:
     OPENAI_KEY=your_openai_api_key
     TRAVITY_KEY=your_tavily_api_key
 
