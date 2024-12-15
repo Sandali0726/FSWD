@@ -11,43 +11,7 @@ AutoCart is an AI-based web application that acts as a machine customer, providi
 - **Search History**: Keeps track of users' search history for easy access and repeat searches.
 
 ## Project Structure
-```plaintext
-AutoCart/
-├── AI/
-│   ├── AI.py
-│   ├── PM.py
-│   ├── Scrapping.py
-│   ├── tavily_search.py
-│   ├── voice recognition.py
-│   └── .gitignore
-├── frontend/
-│   ├── public/
-│   ├── src/
-│   │   ├── app/
-│   │   ├── components/
-│   │   ├── layouts/
-│   │   ├── pages/
-│   │   ├── assets/
-│   │   ├── lib/
-│   │   ├── global.css
-│   │   ├── index.css
-│   │   ├── main.tsx
-│   │   ├── AppRoutes.tsx
-│   │   └── vite-env.d.ts
-│   ├── .gitignore
-│   ├── components.json
-│   ├── eslint.config.js
-│   ├── index.html
-│   ├── package.json
-│   ├── postcss.config.js
-│   ├── tailwind.config.js
-│   ├── tsconfig.app.json
-│   ├── tsconfig.json
-│   ├── tsconfig.node.json
-│   └── vite.config.ts
-├── performance_model.pkl
-└── README.md
-```
+AutoCart/ ├── AI/ │ ├── AI.py │ ├── PM.py │ ├── Scrapping.py │ ├── tavily_search.py │ ├── voice recognition.py │ └── .gitignore ├── frontend/ │ ├── public/ │ ├── src/ │ │ ├── app/ │ │ ├── components/ │ │ ├── layouts/ │ │ ├── pages/ │ │ ├── assets/ │ │ ├── lib/ │ │ ├── global.css │ │ ├── index.css │ │ ├── main.tsx │ │ ├── AppRoutes.tsx │ │ └── vite-env.d.ts │ ├── .gitignore │ ├── components.json │ ├── eslint.config.js │ ├── index.html │ ├── package.json │ ├── postcss.config.js │ ├── tailwind.config.js │ ├── tsconfig.app.json │ ├── tsconfig.json │ ├── tsconfig.node.json │ └── vite.config.ts ├── performance_model.pkl └── README.md
 
 
 ## Installation
@@ -66,7 +30,7 @@ AutoCart/
 1. Navigate to the `AI` directory:
    ```sh
    cd AI
-  
+
 2. Install the required Python packages:
     ```sh
    pip install -r requirements.txt
@@ -77,16 +41,16 @@ AutoCart/
     TRAVITY_KEY=your_tavily_api_key
 
 ### Frontend
- 1. Navigate to the frontend directory:
-    ```sh
+    1. Navigate to the frontend directory:
+        ```sh
         cd frontend
 
-2. Install the required Node.js packages:
-   ```sh
+    2. Install the required Node.js packages:
+        ```sh
         npm install
 
-3. Start the development server:
-    ```sh
+    3. Start the development server:
+        ```sh
         npm run dev
     
 
@@ -101,12 +65,4 @@ AutoCart/
 ### Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
-
-![Screenshot 2024-12-15 161951](https://github.com/user-attachments/assets/f6fcbfee-703e-4fe2-8c71-2bfc3d09a597)
-
-![Screenshot 2024-12-15 162004](https://github.com/user-attachments/assets/622683ec-c13c-4434-9ea4-51a7ae4458d9)
-
-![Screenshot 2024-12-15 162013](https://github.com/user-attachments/assets/c743b91b-41a6-4bea-b926-df7b9d21e9ab)
-
-![Screenshot 2024-12-15 162022](https://github.com/user-attachments/assets/2a5a33e9-7796-4306-a18f-80d74cc4ed0b)
 
