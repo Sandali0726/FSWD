@@ -11,7 +11,7 @@ AutoCart is an AI-based web application that acts as a machine customer, providi
 - **Search History**: Keeps track of users' search history for easy access and repeat searches.
 
 ## Project Structure
-
+```plaintext
 AutoCart/
 ├── AI/
 │   ├── AI.py
@@ -47,7 +47,7 @@ AutoCart/
 │   └── vite.config.ts
 ├── performance_model.pkl
 └── README.md
-
+```
 
 
 ## Installation
@@ -66,7 +66,7 @@ AutoCart/
 1. Navigate to the `AI` directory:
    ```sh
    cd AI
-
+  
 2. Install the required Python packages:
     ```sh
    pip install -r requirements.txt
