@@ -41,16 +41,16 @@ AutoCart/ ├── AI/ │ ├── AI.py │ ├── PM.py │ ├── Sc
     TRAVITY_KEY=your_tavily_api_key
 
 ### Frontend
-    1. Navigate to the frontend directory:
-        ```sh
+ 1. Navigate to the frontend directory:
+    ```sh
         cd frontend
 
-    2. Install the required Node.js packages:
-        ```sh
+2. Install the required Node.js packages:
+   ```sh
         npm install
 
-    3. Start the development server:
-        ```sh
+3. Start the development server:
+    ```sh
         npm run dev
     
 
