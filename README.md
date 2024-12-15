@@ -11,7 +11,42 @@ AutoCart is an AI-based web application that acts as a machine customer, providi
 - **Search History**: Keeps track of users' search history for easy access and repeat searches.
 
 ## Project Structure
-AutoCart/ ├── AI/ │ ├── AI.py │ ├── PM.py │ ├── Scrapping.py │ ├── tavily_search.py │ ├── voice recognition.py │ └── .gitignore ├── frontend/ │ ├── public/ │ ├── src/ │ │ ├── app/ │ │ ├── components/ │ │ ├── layouts/ │ │ ├── pages/ │ │ ├── assets/ │ │ ├── lib/ │ │ ├── global.css │ │ ├── index.css │ │ ├── main.tsx │ │ ├── AppRoutes.tsx │ │ └── vite-env.d.ts │ ├── .gitignore │ ├── components.json │ ├── eslint.config.js │ ├── index.html │ ├── package.json │ ├── postcss.config.js │ ├── tailwind.config.js │ ├── tsconfig.app.json │ ├── tsconfig.json │ ├── tsconfig.node.json │ └── vite.config.ts ├── performance_model.pkl └── README.md
+AutoCart/
+├── AI/
+│   ├── AI.py
+│   ├── PM.py
+│   ├── Scrapping.py
+│   ├── tavily_search.py
+│   ├── voice_recognition.py
+│   └── .gitignore
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── app/
+│   │   ├── components/
+│   │   ├── layouts/
+│   │   ├── pages/
+│   │   ├── assets/
+│   │   ├── lib/
+│   │   ├── global.css
+│   │   ├── index.css
+│   │   ├── main.tsx
+│   │   ├── AppRoutes.tsx
+│   │   └── vite-env.d.ts
+│   ├── .gitignore
+│   ├── components.json
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── package.json
+│   ├── postcss.config.js
+│   ├── tailwind.config.js
+│   ├── tsconfig.app.json
+│   ├── tsconfig.json
+│   ├── tsconfig.node.json
+│   └── vite.config.ts
+├── performance_model.pkl
+└── README.md
+
 
 
 ## Installation
@@ -38,11 +73,11 @@ AutoCart/ ├── AI/ │ ├── AI.py │ ├── PM.py │ ├── Sc
     OPENAI_KEY=your_openai_api_key
     TRAVITY_KEY=your_tavily_api_key
 
-###Frontend
+### Frontend
 
     1. Navigate to the frontend directory:
     ```sh
-      cd frontend
+   cd frontend
            
     2. Install the required Node.js packages:
     ```sh
@@ -53,7 +88,7 @@ AutoCart/ ├── AI/ │ ├── AI.py │ ├── PM.py │ ├── Sc
     npm run dev
     
 
-###Usage
+### Usage
 
     1.Open your browser and navigate to http://localhost:3000.
     2.Use the search form to find products.
