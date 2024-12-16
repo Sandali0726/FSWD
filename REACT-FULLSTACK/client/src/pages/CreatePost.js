@@ -1,11 +1,14 @@
-import React from 'react'
+import React from 'react';
 import {Formik, Form, Field, ErrorMessage} from 'formik';
+
+
+
 
 function CreatePost() {
   return (
     <div className='createPostPage'> 
     <Formik >
-        <form>
+    <Form className="formContainer">
             <label>Title:</label>
             <Field 
                 id="inputCreatePost" 
@@ -25,10 +28,10 @@ function CreatePost() {
                 placeholder="(Ex. John...)"
             />
             <button type='submit'>CreatePost</button>
-        </form>
+            </Form>
     </Formik> 
     </div>
-  )
+  );
 }
 
 export default CreatePost
