@@ -2,6 +2,10 @@ import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
+
+
+
 
 function CreatePost() {
   const initialValues = {
@@ -12,13 +16,19 @@ function CreatePost() {
 
   const validationSchema = Yup.object().shape({
     title: Yup.string().required("You must input a Title!"),
-    postText: Yup.string().required(),
-    username: Yup.string().min(3).max(15).required(),
+    postText: Yup.string()
+      .min(3, "Post must be at least 3 characters long")
+      .required("You must input a Post!"),
+    username: Yup.string()
+      .min(3, "Username must be at least 3 characters long")
+      .max(25, "Username can't be longer than 15 characters")
+      .required("You must input a Username!"),
   });
-
+  
+  const navigate = useNavigate();
   const onSubmit = (data) => {
     axios.post("http://localhost:3001/posts", data).then((response) => {
-      console.log("IT WORKED");
+      navigate("/");
     });
   };
   return (
