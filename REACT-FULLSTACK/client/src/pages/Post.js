@@ -32,7 +32,8 @@ const addComment = () => {
     if (response.data.error) {
       alert(response.data.error);
     } else {
-    setComments([...comments, {commentBody: newComment}]);
+      const commentToAdd = {commentBody: newComment, username: response.data.username};
+    setComments([...comments,commentToAdd]);
     setNewComment("");
   };
 })};
@@ -63,7 +64,11 @@ const addComment = () => {
         <div className="listOfComments">
           {comments.map((comment, key) => {
             return (
-              <div key = {key}  className="comment">{comment.commentBody}</div>
+              <div key={key} className="comment">
+                <div>{comment.commentBody}</div>
+                <div><strong>Username:</strong> {comment.username}</div>
+                </div>
+            
             );
           })}
         </div>
