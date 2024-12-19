@@ -15,11 +15,13 @@ function Login() {
       
 
   return (
-    <div>
+    <div className="loginContainer">
+    <label>Username:</label>
       <input type = "text" 
       onChange={(event) => {
         setusername(event.target.value);
       }}/>
+      <label>Password:</label>
       <input type = "password"
       onChange={(event) => {
         setpassword(event.target.value);
