@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import axios from "axios";
-import { useNavigation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../helpers/AuthContext";
 
 function Login() {
@@ -8,7 +8,7 @@ function Login() {
   const [password, setPassword] = useState("");
   const { setAuthState } = useContext(AuthContext);
 
-  let navigate = useNavigation();
+  let navigate = useNavigate();
 
   const login = () => {
     const data = { username: username, password: password };

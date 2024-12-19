@@ -10,7 +10,11 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 function App() {
-  const [authState, setAuthState] = useState(false);
+  const [authState, setAuthState] = useState({
+    username: "",
+    id: 0,
+    status: false,
+  });
 
   useEffect(() => {
     axios
@@ -21,12 +25,25 @@ function App() {
       })
       .then((response) => {
         if (response.data.error) {
-          setAuthState(false);
+          setAuthState({ ...authState, status: false });
         } else {
-          setAuthState(true);
+          setAuthState({
+            username: response.data.username,
+            id: response.data.id,
+            status: true,
+          });
         }
+      })
+      .catch((err) => {
+        console.error("Authentication failed:", err);
+        setAuthState({ ...authState, status: false });
       });
   }, []);
+
+  const logout = () => {
+    localStorage.removeItem("accessToken");
+    setAuthState({ username: "", id: 0, status: false });
+  };
 
   return (
     <div className="App">
@@ -34,20 +51,22 @@ function App() {
         <Router>
           <div className="navbar">
             <Link to="/"> Home Page</Link>
-            <Link to="/createpost"> Create A Post</Link>
-            {!authState && (
+            {authState.status && <Link to="/createpost"> Create A Post</Link>}
+            {!authState.status ? (
               <>
                 <Link to="/login"> Login</Link>
                 <Link to="/registration"> Registration</Link>
               </>
+            ) : (
+              <button onClick={logout}> Logout</button>
             )}
           </div>
           <Routes>
-            <Route path="/" exact component={Home} />
-            <Route path="/createpost" exact component={CreatePost} />
-            <Route path="/post/:id" exact component={Post} />
-            <Route path="/registration" exact component={Registration} />
-            <Route path="/login" exact component={Login} />
+            <Route path="/" element={<Home />} />
+            <Route path="/createpost" element={<CreatePost />} />
+            <Route path="/post/:id" element={<Post />} />
+            <Route path="/registration" element={<Registration />} />
+            <Route path="/login" element={<Login />} />
           </Routes>
         </Router>
       </AuthContext.Provider>
