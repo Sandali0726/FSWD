@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const { Posts } = require("../models");
+const { Posts } = require('../models'); // Correct
+
 
 router.get("/", async (req, res) => {
   const listOfPosts = await Posts.findAll();
