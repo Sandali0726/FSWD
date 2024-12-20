@@ -34,11 +34,13 @@ function App() {
         <div className="navbar">
           <Link to="/"> Home Page</Link>
           {authState && <Link to="/createpost"> Create A Post</Link>}
-          {!authState && (
+          {!authState ?(
             <>
               <Link to="/login"> Login</Link>
               <Link to="/registration"> Registration</Link>
             </>
+          ):(
+            <button>Logout</button>
           )}
         </div>
         <Routes>
