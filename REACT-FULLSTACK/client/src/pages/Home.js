@@ -18,7 +18,20 @@ function Home() {
     {PostId:postId},
     {headers:{accessToken:localStorage.getItem('accessToken')}}
   ).then((response)=>{
-    alert(response.data)
+    
+    setListOfPosts(listOfPosts.map((post) => {
+      if(post.id ==postId){
+        if (response.data.liked){
+        return{...post,Likes:[...post.Likes,0]}}
+        else{
+          const likesArray = post.Likes
+          likesArray.pop();
+          return{...post,Likes:likesArray}}
+      }      
+      else{
+          return post
+          }
+    }))
   })
   }
 
@@ -35,7 +48,10 @@ function Home() {
               navigate(`/post/${value.id}`);
             }}>{value.postText}</div>
             <div className="footer">{value.username}
-              <button onClick ={()=>{likeAPost(value.id)}}>Like</button>
+              <button onClick ={()=>{likeAPost(value.id)}}>
+                {""}
+                Like</button>
+                <label>{value.Likes.length}</label>
               </div>
           </div>
         );

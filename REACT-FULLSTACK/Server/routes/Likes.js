@@ -13,7 +13,7 @@ router.post("/",validateToken,async(requestAnimationFrame,res)=>{
        });
        if(!found){
         await Likes.create({PostId:PostId,UserId:UserId});
-        res.json("Liked The Post");
+        res.json({liked:true});
        }
        else{
         await Likes.destroy({
@@ -21,7 +21,7 @@ router.post("/",validateToken,async(requestAnimationFrame,res)=>{
             PostId:PostId,UserId:UserId
           },
         });
-        res.json("UnLiked The Post");
+        res.json({liked:false});
 
        }
   

@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { Posts } = require('../models'); // Correct
+const { Posts,Likes } = require('../models'); // Correct
 const { validateToken } = require("../middlewares/AuthMiddleware");
 
 
