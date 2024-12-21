@@ -83,7 +83,7 @@ const deleteComment = (id) => {
               <div key={key} className="comment">
                 <div>{comment.commentBody}</div>
                 <div><strong>Username:</strong> {comment.username}</div>
-                {authState.username===comment.username && <button onClick= {() => {deleteComment(comment.id)}}>delete</button>}
+                {authState.username==comment.username && <button onClick= {() => {deleteComment(comment.id)}}>delete</button>}
                 </div>
             
             );
