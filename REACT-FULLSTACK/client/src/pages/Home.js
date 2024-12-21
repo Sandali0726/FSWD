@@ -6,12 +6,15 @@ import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 
 function Home() {
   const [listOfPosts, setListOfPosts] = useState([]);
+  const [likedPosts,setLikedPosts] = useState([]);
   let navigate = useNavigate();
 
   useEffect(() => {
     axios.get("http://localhost:3001/posts",
-    {headers:{accessToken:localStorage.getItem('accessToken')}}).then((response) => {
+    {headers:{accessToken:localStorage.getItem('accessToken')}})
+    .then((response) => {
       setListOfPosts(response.data,listOfPosts);
+      setLikedPosts(response.data,listOfPosts);
     });
   }, []);
 
