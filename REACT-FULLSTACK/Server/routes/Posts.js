@@ -5,7 +5,7 @@ const { validateToken } = require("../middlewares/AuthMiddleware");
 
 
 router.get("/", async (req, res) => {
-  const listOfPosts = await Posts.findAll();
+  const listOfPosts = await Posts.findAll({include: [Likes]});
   res.json(listOfPosts);
 });
 
