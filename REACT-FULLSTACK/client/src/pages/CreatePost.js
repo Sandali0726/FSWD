@@ -16,7 +16,7 @@ function CreatePost() {
   };
 
   useEffect(() => {
-    if (!authState.status){
+    if (!localStorage.getItem("accessToken")){
       navigate("/login")
     }
   },[]);
