@@ -21,7 +21,7 @@ router.get("/byId/:id", async (req, res) => {
 
 router.get("/byuserId/:id", async (req, res) => {
   const id = req.params.id;
-  const listofpost = await Posts.findAll({where:{}});
+  const listofpost = await Posts.findAll({where:{UserId:id}});
   res.json(listofpost);
 });
 
@@ -29,6 +29,7 @@ router.get("/byuserId/:id", async (req, res) => {
 router.post("/", validateToken, async (req, res) => {
   const post = req.body;
   post.username=req.user.username;
+  post.UserId=req.user.id;
   await Posts.create(post);
   res.json(post);
 });
