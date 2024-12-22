@@ -15,9 +15,14 @@ function CreatePost() {
   };
 
   const validationSchema = Yup.object().shape({
-    title: Yup.string().required(),
-    postText: Yup.string().min(3).required(),
-    username: Yup.string().min(3).max(25).required(),
+    title: Yup.string().required("You must input a Title!"),
+    postText: Yup.string()
+      .min(3, "Post must be at least 3 characters long")
+      .required("You must input a Post!"),
+    username: Yup.string()
+      .min(3, "Username must be at least 3 characters long")
+      .max(25, "Username can't be longer than 15 characters")
+      .required("You must input a Username!"),
   });
   
   const navigate = useNavigate();
