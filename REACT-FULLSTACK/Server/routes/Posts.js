@@ -27,7 +27,7 @@ router.post("/", validateToken, async (req, res) => {
 });
 
 
-router.delete("/",validateToken, async(req,res) => {
+router.delete("/:postId",validateToken, async(req,res) => {
   const postId = req.params.postId;
   await Posts.destroy({
     where: {
