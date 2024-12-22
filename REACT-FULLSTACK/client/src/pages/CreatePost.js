@@ -12,8 +12,7 @@ function CreatePost() {
   const {authState } = useContext(AuthContext);
   const initialValues = {
     title: "",
-    postText: "",
-    
+    postText: "", 
   };
 
   useEffect(() => {
