@@ -10,7 +10,7 @@ router.get("/",validateToken, async (req, res) => {
   const likePosts = await Likes.findAll({where:{UserId:req.user.id}})
   
   
-  res.json({listOfPosts:listOfPosts,likedPosts:likedPosts});
+  res.json({listOfPosts:listOfPosts,likedPosts:likePosts});
 });
 
 router.get("/byId/:id", async (req, res) => {

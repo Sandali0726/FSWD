@@ -14,18 +14,20 @@ function Home() {
     {headers:{accessToken:localStorage.getItem('accessToken')}})
     .then((response) => {
       setListOfPosts(response.data,listOfPosts);
-      setLikedPosts(response.data,listOfPosts);
+      setLikedPosts(response.data,likedPosts);
+      console.log(response.data,likedPosts);
     });
   }, []);
 
   const likeAPost = (postId) => {
-    axios.post("http://localhost:3001/likes",
+    axios.post(
+      "http://localhost:3001/likes",
     {PostId:postId},
     {headers:{accessToken:localStorage.getItem('accessToken')}}
   ).then((response)=>{
     
     setListOfPosts(listOfPosts.map((post) => {
-      if(post.id ==postId){
+      if(post.id===postId){
         if (response.data.liked){
         return{...post,Likes:[...post.Likes,0]}}
         else{
