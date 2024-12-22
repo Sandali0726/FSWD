@@ -19,6 +19,13 @@ router.get("/byId/:id", async (req, res) => {
   res.json(post);
 });
 
+router.get("/byuserId/:id", async (req, res) => {
+  const id = req.params.id;
+  const listofpost = await Posts.findAll({where:{}});
+  res.json(listofpost);
+});
+
+
 router.post("/", validateToken, async (req, res) => {
   const post = req.body;
   post.username=req.user.username;
