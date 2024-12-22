@@ -26,4 +26,16 @@ router.post("/", validateToken, async (req, res) => {
   res.json(post);
 });
 
+
+router.delete("/",validateToken, async(req,res) => {
+  const postId = req.params.postId;
+  await Posts.destroy({
+    where: {
+      id: postId,
+    },
+  });
+  res.json("DELETED SUCCESSFULLY");
+})
+
+
 module.exports = router;
