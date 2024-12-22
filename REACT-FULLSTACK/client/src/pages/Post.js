@@ -73,12 +73,39 @@ function Post() {
         navigate("/");
       });
   };
+
+  const editPost = (option) => {
+    if(option === "title"){
+      let newTitle = prompt("Enter new Title:")
+    }else{
+      let newPostText = prompt("Enter new Text:")
+
+    }
+  };
+      
+
+
   return (
     <div className="postPage">
       <div className="leftSide">
         <div className="post" id="individual">
-          <div className="title"> {postObject.title} </div>
-          <div className="body">{postObject.postText}</div>
+          <div 
+            className="title" 
+            onClick ={ () => {
+              editPost("title");
+      }}
+      >
+        
+        {postObject.title} 
+        </div>
+          <div 
+            className="body" 
+            onClick={() =>{
+              editPost("body")
+            }}
+            >
+              {postObject.postText}
+              </div>
           <div className="footer">
             {postObject.username}
             {authState.username === postObject.username && (

@@ -6,6 +6,7 @@ import Post from "./pages/Post";
 import Registration from "./pages/Registration";
 import Login from "./pages/Login";
 import PageNotFound from "./pages/PageNotFound";
+import Profile from "./pages/Profile";
 
 import { AuthContext } from "./helpers/AuthContext";
 import { useState, useEffect } from "react";
@@ -72,6 +73,7 @@ function App() {
           <Route path="/registration" element={<Registration />} />
           <Route path="/login" element={<Login />} />
           <Route path="*" element={<PageNotFound />} />
+          <Route path="/Profile/:id" element={<Profile />} />
         </Routes>
       </AuthContext.Provider>
     </div>
