@@ -13,8 +13,12 @@ function Home() {
     axios.get("http://localhost:3001/posts",
     {headers:{accessToken:localStorage.getItem('accessToken')}})
     .then((response) => {
-      setListOfPosts(response.data,listOfPosts);
-      setLikedPosts(response.data,listOfPosts);
+      setListOfPosts(response.data.listOfPosts);
+      setLikedPosts(
+        response.data.likedPosts.map((like) => {
+          return like.PostId;
+        }));
+      
     });
   }, []);
 
@@ -25,7 +29,7 @@ function Home() {
   ).then((response)=>{
     
     setListOfPosts(listOfPosts.map((post) => {
-      if(post.id ==postId){
+      if(post.id ===postId){
         if (response.data.liked){
         return{...post,Likes:[...post.Likes,0]}}
         else{
@@ -34,9 +38,23 @@ function Home() {
           return{...post,Likes:likesArray}}
       }      
       else{
-          return post
+          return post;
           }
+    })
+  );
+  
+   if(likedPosts.includes(postId)){
+    setLikedPosts(
+      likedPosts.filter((id) => { 
+        return id !== postId;
+
     }))
+
+   }
+   else{
+    setLikedPosts([...likedPosts,postId]);
+   }
+
   })
   }
 
@@ -44,12 +62,9 @@ function Home() {
     <div>
       {listOfPosts.map((value, key) => {
         return (
-          <div
-            className="post"
-            
-          >
+          <div key = {key} className = "post">
             <div className="title"> {value.title} </div>
-            <div className="body" onClick={() => {
+            <div className="body" onClick = { () => {
               navigate(`/post/${value.id}`);
             }}>{value.postText}</div>
             
@@ -57,11 +72,14 @@ function Home() {
             <div className="username">{value.username}
             <div className="buttons">
               
-                < ThumbUpIcon onClick ={()=>
-                {likeAPost(value.id)}}
-                //className={}
+                < ThumbUpIcon 
+                    onClick = {() => {
+                      likeAPost(value.id);
+                    }}
+                className={
+                  likedPosts.includes(value.id) ? "unlikeBttn" : "likeBttn"}
                 /> 
-              <label>{value.Likes.length}</label>
+              <label> {value.Likes.length} </label>
             </div>
             </div>
             </div>
