@@ -20,17 +20,30 @@ import { AuthContext } from "../helpers/AuthContext";
         then((response) => {
             setListOfPost(response.data)
         });
+        axios.get(`http://localhost:3001/ChangePassword`).then((response) => {
+          setUsername(response.data.username)})
+      
         },[]);
 
   return (
     <div className='ProfilePageContainer'>
         <div className='basicInfo'>
+          {" "}
           <h1> Username : {username} </h1>
 
           {authState.username === username && (
-              <button >change my password</button>
-            )}
+              <button  
+                onClick={() => {
+                    navigate('/ChangePassword');
+                }}
+                >
+                  {" "}
+                  change my password
+                  </button>
+                  )}
           </div>
+
+
         <div className='listOfPosts'>
           {listOfPosts.map((value, key) => {
         return (

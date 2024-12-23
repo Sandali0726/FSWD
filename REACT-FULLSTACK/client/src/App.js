@@ -77,7 +77,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="*" element={<PageNotFound />} />
           <Route path="/Profile/:id" element={<Profile />} />
-          <Route path="/ChangePassword/:id" element={<ChangePassword />} />
+          <Route path="/ChangePassword" element={<ChangePassword/>} />
         </Routes>
       </AuthContext.Provider>
     </div>
