@@ -89,6 +89,11 @@ REACT-FULLSTACK/
 ## Contributing
 
 Contributions are welcome! Please fork the repository and create a pull request with your changes.
+![Screenshot 2024-12-23 213148](https://github.com/user-attachments/assets/2f56b5b8-c114-410d-b2b5-230303fabfaf)
+![Screenshot 2024-12-23 213451](https://github.com/user-attachments/assets/a106f080-64cc-4b5c-b9ee-c00fbcc6c158)
+![Screenshot 2024-12-23 213524](https://github.com/user-attachments/assets/56ab0472-4f74-423d-95be-d61a920d159a)
+![Screenshot 2024-12-23 213540](https://github.com/user-attachments/assets/7e4b102e-051e-420b-9312-17fd726ed90c)
+![Screenshot 2024-12-23 213557](https://github.com/user-attachments/assets/d30f493c-ff79-408b-810f-25642696287f)
 
 
 
