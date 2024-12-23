@@ -19,10 +19,8 @@ import { AuthContext } from "../helpers/AuthContext";
         axios.get(`http://localhost:3001/posts/byuserId/${id}`).
         then((response) => {
             setListOfPost(response.data)
-        });
-        axios.get(`http://localhost:3001/ChangePassword`).then((response) => {
-          setUsername(response.data.username)})
-      
+        })
+        
         },[]);
 
   return (
@@ -34,7 +32,7 @@ import { AuthContext } from "../helpers/AuthContext";
           {authState.username === username && (
               <button  
                 onClick={() => {
-                    navigate('/ChangePassword');
+                    navigate('/changepassword');
                 }}
                 >
                   {" "}
